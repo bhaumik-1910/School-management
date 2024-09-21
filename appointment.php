@@ -94,7 +94,7 @@ include './SMS/database.php';
 <?php
 //data save in database 
 if (isset($_POST['submit'])) {
-    echo "Button Clicked";
+    // echo "Button Clicked";
 
     //get data from form
     $G_Name = $_POST['G_Name'];
