@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 01:20 PM
+-- Generation Time: Sep 21, 2024 at 05:52 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -24,6 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `G_Name` varchar(30) NOT NULL,
+  `G_Email` varchar(25) NOT NULL,
+  `C_Name` varchar(30) NOT NULL,
+  `C_Age` int(5) NOT NULL,
+  `Message` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`G_Name`, `G_Email`, `C_Name`, `C_Age`, `Message`) VALUES
+('try', 'try@gmail.com', 'ty', 10, 'cfhfgh'),
+('manjibhai', 'patel@gmail.com', 'manu', 10, 'fhhfdhfhsdfhsdhsdhghdskgv'),
+('try', 'try@gmail.com', 'ty', 10, 'sdgfffffffffffffffffffffff');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `attendance`
 --
 
@@ -38,7 +61,7 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`sid`, `date`, `aid`) VALUES
-(3, '2024-01-08', 7);
+(3, '2024-09-21', 8);
 
 -- --------------------------------------------------------
 
@@ -51,14 +74,6 @@ CREATE TABLE `attendancereport` (
   `sid` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `attendancereport`
---
-
-INSERT INTO `attendancereport` (`aid`, `sid`, `status`) VALUES
-(7, '25142821', 'Present'),
-(7, '79325536', 'Present');
 
 -- --------------------------------------------------------
 
@@ -298,16 +313,16 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`sid`, `fname`, `lname`, `bday`, `address`, `parent`, `gender`, `classroom`, `email`) VALUES
 ('10252379', 'HARSHIL', 'SAKARIYA ', '2004-07-10', 'Rajkot', 48, 'Male', '3-C', 'harshil@gmail.com'),
-('10556147', 'BHAUMIK', 'KOTHIYA ', '2024-09-19', 'Rajkot', 3, 'Male', '3-B', 'bhaumik@gamil.com'),
+('10556147', 'BHAUMIK', 'KOTHIYA ', '2024-09-19', 'Rajkot', 3, 'Male', '3-B', 'bhaumik@gmaill.com'),
 ('12005742', 'VIPUL ', 'DHARAJIYA ', '2004-07-10', 'Rajkot', 13, 'Male', '3-C', 'vipul@gmail.com'),
 ('13612004', 'BANSI ', 'GALORIYA ', '2004-07-10', 'Rajkot', 21, 'Female', '3-C', 'bansi@gmail.com'),
-('13732567', 'ACHYUT ', 'VAGHASIYA ', '2024-08-10', 'Rajkot', 63, 'Male', '3-B', 'achyut@gamil.com'),
+('13732567', 'ACHYUT ', 'VAGHASIYA ', '2024-08-10', 'Rajkot', 63, 'Male', '3-B', 'achyut@gmail.com'),
 ('14502776', 'VIRAJ ', 'SEJPAL ', '2005-03-09', 'Rajkot', 53, 'Male', '3-C', 'viraj@gmail.com'),
 ('18986355', 'GHANSHYAM ', 'DADHANIYA ', '2024-08-10', 'Rajkot', 11, 'Male', '3-B', 'ghanshyam@gmail.com'),
 ('1970562', 'JASH ', 'GHETIYA ', '2024-08-29', 'Rajkot', 23, 'Male', '3-C', 'jash@gmail.com'),
-('20825657', 'KRUNAL ', 'ASHIYANI ', '2005-03-09', 'Rajkot', 6, 'Male', '3-B', 'krunal@gail.com'),
+('20825657', 'KRUNAL ', 'ASHIYANI ', '2005-03-09', 'Rajkot', 6, 'Male', '3-B', 'krunal@gmail.com'),
 ('2233337', 'DHYEY ', 'SAVALIYA ', '2004-10-19', 'Rajkot', 50, 'Male', '3-B', 'dhyey@gmail.com'),
-('25142821', 'NIL', 'AKABARI ', '2024-09-15', 'Rajkot', 1, 'Male', '3-B', 'nil@gamil.com'),
+('25142821', 'NIL', 'AKABARI ', '2024-09-15', 'Rajkot', 1, 'Male', '3-B', 'nil@gmail.com'),
 ('25301165', 'BANSI ', 'TARAVIYA ', '2024-08-29', 'Rajkot', 58, 'Female', '3-C', 'tbansi@gmail.com'),
 ('25862015', 'CHIRAG ', 'JARIYA ', '2004-05-27', 'Rajkot', 27, 'Male', '3-B', 'chiarg@gmail.com'),
 ('27318074', 'SMIT ', 'JADAV ', '2004-10-19', 'Rajkot', 26, 'Male', '3-B', 'jsmit@gmail.com'),
@@ -331,7 +346,7 @@ INSERT INTO `student` (`sid`, `fname`, `lname`, `bday`, `address`, `parent`, `ge
 ('54965701', 'SMIT ', 'DUSARA ', '2004-07-10', 'Rajkot', 17, 'Male', '3-B', 'smit@gmail.com'),
 ('55153875', 'ABHAYRAJSINH ', 'CHUDASAMA ', '2004-10-19', 'Rajkot', 10, 'Male', '3-B', 'abhayrajsinh@gmail.com'),
 ('55941080', 'KIRTANKUMAR ', 'BUHA ', '2004-10-19', 'Rajkot', 8, 'Male', '3-B', 'kirtan@gmail.com'),
-('56607245', 'NIKHIL ', 'SOLANKI ', '2024-08-29', 'Rajkot', 54, 'Male', '3-B', 'nikhil@gamil.com'),
+('56607245', 'NIKHIL ', 'SOLANKI ', '2024-08-29', 'Rajkot', 54, 'Male', '3-B', 'nikhil@gmail.com'),
 ('59314413', 'GHANSHYAM ', 'PARAKARA ', '2004-07-10', 'Rajkot', 40, 'Male', '3-B', 'pghanshyam@gmail.com'),
 ('60298640', 'RAKSHIT ', 'GOHEL ', '2005-03-09', 'Rajkot', 24, 'Male', '3-B', 'raxit@gmail.com'),
 ('6144390', 'SAMIR ', 'NAKANI ', '2004-07-10', 'Rajkot', 34, 'Male', '3-B', 'samir@gmail.com'),
@@ -442,11 +457,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`role`, `email`, `password`) VALUES
-('Teacher', 'b@gamil.com', 'b'),
-('Student', 'm@gmail.com', 'm'),
-('Parent', 'par@par.par', 'par'),
-('Student', 'stu@stu.stu', 'stu'),
-('Teacher', 'tea@tea.tea', 'tea');
+('Teacher', 'hardik@gmail.com', 'hardik'),
+('Student', 'nil@gmail.com', 'nil'),
+('Parent', 'suresh@gmail.com', 'suresh');
 
 --
 -- Indexes for dumped tables
@@ -535,7 +548,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `exam`
