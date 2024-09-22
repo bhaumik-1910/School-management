@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2024 at 05:52 PM
+-- Generation Time: Sep 22, 2024 at 05:16 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -28,8 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `appointment` (
+  `Id` int(11) NOT NULL,
   `G_Name` varchar(30) NOT NULL,
-  `G_Email` varchar(25) NOT NULL,
+  `G_Email` varchar(30) NOT NULL,
   `C_Name` varchar(30) NOT NULL,
   `C_Age` int(5) NOT NULL,
   `Message` varchar(250) NOT NULL
@@ -39,10 +40,8 @@ CREATE TABLE `appointment` (
 -- Dumping data for table `appointment`
 --
 
-INSERT INTO `appointment` (`G_Name`, `G_Email`, `C_Name`, `C_Age`, `Message`) VALUES
-('try', 'try@gmail.com', 'ty', 10, 'cfhfgh'),
-('manjibhai', 'patel@gmail.com', 'manu', 10, 'fhhfdhfhsdfhsdhsdhghdskgv'),
-('try', 'try@gmail.com', 'ty', 10, 'sdgfffffffffffffffffffffff');
+INSERT INTO `appointment` (`Id`, `G_Name`, `G_Email`, `C_Name`, `C_Age`, `Message`) VALUES
+(1, 'manjibhai', 'manjibhai@gmail.com', 'manu', 10, 'hello ');
 
 -- --------------------------------------------------------
 
@@ -466,6 +465,12 @@ INSERT INTO `user` (`role`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `attendance`
 --
 ALTER TABLE `attendance`
@@ -543,6 +548,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `attendance`

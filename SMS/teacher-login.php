@@ -90,12 +90,12 @@ if (isset($_POST['submit'])) {
       while ($row2 = $result2->fetch_assoc()) {
         $_SESSION['user'] = $row2['fname'] . " " . $row2['lname'];
         // $_SESSION['uid'] = $row2['pid'];
-        if ($_SESSION['role'] == 'Student') {
+        if ($_SESSION['role'] == 'Teacher') {
           $_SESSION['uid'] = $row2['sid'];
-        } else if ($_SESSION['role'] == 'Parent') {
-          $_SESSION['uid'] = $row2['pid'];
-        } else if ($_SESSION['role'] == 'Teacher') {
-          $_SESSION['uid'] = $row2['tid'];
+        // } else if ($_SESSION['role'] == 'Parent') {
+        //   $_SESSION['uid'] = $row2['pid'];
+        // } else if ($_SESSION['role'] == 'Teacher') {
+        //   $_SESSION['uid'] = $row2['tid'];
         }
       }
 

@@ -80,8 +80,8 @@ include_once 'database.php';
               $_SESSION['role'] = $row['role'];
 
 
-            //   $_SESSION['user'] = $row['fname'] . " " . $row['lname'];
-
+              //   $_SESSION['user'] = $row['fname'] . " " . $row['lname'];
+        
             }
 
             $sql2 = "SELECT * FROM " . $_SESSION['role'] . " WHERE email ='" . $email . "'";
@@ -90,12 +90,12 @@ include_once 'database.php';
               while ($row2 = $result2->fetch_assoc()) {
                 $_SESSION['user'] = $row2['fname'] . " " . $row2['lname'];
                 // $_SESSION['uid'] = $row2['pid'];
-                if ($_SESSION['role'] == 'Student') {
+                if ($_SESSION['role'] == 'Parent') {
                   $_SESSION['uid'] = $row2['sid'];
-                } else if ($_SESSION['role'] == 'Parent') {
-                  $_SESSION['uid'] = $row2['pid'];
-                } else if ($_SESSION['role'] == 'Teacher') {
-                  $_SESSION['uid'] = $row2['tid'];
+                // } else if ($_SESSION['role'] == 'Parent') {
+                //   $_SESSION['uid'] = $row2['pid'];
+                // } else if ($_SESSION['role'] == 'Teacher') {
+                //   $_SESSION['uid'] = $row2['tid'];
                 }
               }
 

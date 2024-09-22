@@ -70,7 +70,8 @@ include './SMS/database.php';
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit" name="submit">Submit</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit"
+                                        name="submit">Submit</button>
                                 </div>
                             </div>
                         </form>

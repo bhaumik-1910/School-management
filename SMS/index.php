@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Dashboard</title>
   <link rel="icon" href="../img/logo.png">
-  
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -56,6 +56,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main Header -->
     <?php include_once 'header.php'; ?>
+    
     <!-- Left side column. contains the logo and sidebar -->
     <?php include_once 'sidebar.php'; ?>
 
