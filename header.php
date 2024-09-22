@@ -65,8 +65,6 @@
                             <a href="team.php" class="dropdown-item">Popular Teachers</a>
                             <a href="call-to-action.php" class="dropdown-item">Become A Teachers</a>
                             <a href="appointment.php" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                            <a href="404.php" class="dropdown-item">404 Error</a>
                         </div>
                     </div>
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2024 at 05:16 AM
+-- Generation Time: Sep 22, 2024 at 11:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -97,6 +97,30 @@ INSERT INTO `classroom` (`hno`, `title`, `location`, `capacity`) VALUES
 ('3-C', 'BCA', 'Blobk-C', 65),
 ('3-D', 'Bsc-it', 'Blobk-D', 50),
 ('3-E', 'BCA', 'Blobk-E', 70);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaint`
+--
+
+CREATE TABLE `complaint` (
+  `Id` int(11) NOT NULL,
+  `Y_name` varchar(30) NOT NULL,
+  `Y_email` varchar(30) NOT NULL,
+  `Subject` varchar(30) NOT NULL,
+  `Message` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `complaint`
+--
+
+INSERT INTO `complaint` (`Id`, `Y_name`, `Y_email`, `Subject`, `Message`) VALUES
+(2, 'Kothiya Bhaumik ', 'bhaumik@gmail.com', 'Python', 'Samjatu nathi'),
+(3, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs'),
+(4, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs'),
+(5, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs');
 
 -- --------------------------------------------------------
 
@@ -489,6 +513,12 @@ ALTER TABLE `classroom`
   ADD PRIMARY KEY (`hno`);
 
 --
+-- Indexes for table `complaint`
+--
+ALTER TABLE `complaint`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `exam`
 --
 ALTER TABLE `exam`
@@ -560,6 +590,12 @@ ALTER TABLE `appointment`
 --
 ALTER TABLE `attendance`
   MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `complaint`
+--
+ALTER TABLE `complaint`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `exam`

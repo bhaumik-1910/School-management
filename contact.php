@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php 
+
+include 'header.php'; 
+
+include './SMS/database.php';
+?>
 
 
 <!-- Page Header End -->
@@ -39,7 +44,7 @@
                     style="width: 75px; height: 75px;">
                     <i class="fa fa-envelope-open fa-2x text-primary"></i>
                 </div>
-                <h6>sarvoday@gmail.com</h6>
+                <h6>sarvodaya@gmail.com</h6>
             </div>
             <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
@@ -55,39 +60,39 @@
                     <div class="h-100 d-flex flex-column justify-content-center p-5">
                         <p class="mb-4">The contact form is currently inactive. Get a functional and working
                             contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a
-                            little code and you're done. <a href="#">Download Now</a>.</p>
-                        <form>
+                            little code and you're done.</p>
+                        <form method="Post">
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name"
+                                        <input type="text" class="form-control border-0" id="name" name="Y_name"
                                             placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email"
+                                        <input type="email" class="form-control border-0" id="email" name="Y_email"
                                             placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="subject"
+                                        <input type="text" class="form-control border-0" id="subject" name="Subject"
                                             placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here"
+                                        <textarea class="form-control border-0" placeholder="Leave a message here" name="Message"
                                             id="message" style="height: 100px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send
+                                    <button class="btn btn-primary w-100 py-3" type="submit" name="submit">Send
                                         Message</button>
                                 </div>
                             </div>
@@ -110,3 +115,34 @@
 
 
 <?php include 'footer.php'; ?>
+
+<?php
+//data save in database 
+if (isset($_POST['submit'])) {
+    // echo "Button Clicked";
+
+    //get data from form
+    $Y_name = $_POST['Y_name'];
+    $Y_email = $_POST['Y_email'];
+    $Subject = $_POST['Subject'];
+    $Message = $_POST['Message'];
+
+    //sqlquery to save the data into database 
+    $sql = "INSERT INTO complaint SET 
+                Y_name='$Y_name',
+                Y_email='$Y_email',
+                Subject='$Subject',
+                Message='$Message' ";
+
+    //this query is saving data in database 
+    $res = mysqli_query($conn, $sql);
+
+    if ($res == true) {
+        echo "Data Inserted";
+    } else {
+        echo "Faile to Data Inserted";
+    }
+
+}
+?>
+

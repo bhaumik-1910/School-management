@@ -222,7 +222,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Radhika Pithadiya</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -232,13 +232,13 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-primary pt-2">
                                     <h6 class="text-primary mb-1">Age:</h6>
-                                    <small>3-5 Years</small>
+                                    <small>15-20 Years</small>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>8:00-9:00 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -263,7 +263,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Khushbu Joshi</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -273,13 +273,13 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-primary pt-2">
                                     <h6 class="text-primary mb-1">Age:</h6>
-                                    <small>3-5 Years</small>
+                                    <small>10-25 Years</small>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>9:00-10:00 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -304,7 +304,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Bhoomi Pandiya</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -314,13 +314,13 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-primary pt-2">
                                     <h6 class="text-primary mb-1">Age:</h6>
-                                    <small>3-5 Years</small>
+                                    <small>15:22 Years</small>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>10:11 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -345,7 +345,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Hardik Dave</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -355,13 +355,13 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-primary pt-2">
                                     <h6 class="text-primary mb-1">Age:</h6>
-                                    <small>3-5 Years</small>
+                                    <small>15:22 Years</small>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>8:00-9:00 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -386,7 +386,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Nikhil Dave</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -396,13 +396,13 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-primary pt-2">
                                     <h6 class="text-primary mb-1">Age:</h6>
-                                    <small>3-5 Years</small>
+                                    <small>18-25 Years</small>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>9:00-10:00 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -427,7 +427,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                    <h6 class="text-primary mb-1">Viranchhi Dave</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -443,7 +443,7 @@
                             <div class="col-4">
                                 <div class="border-top border-3 border-success pt-2">
                                     <h6 class="text-success mb-1">Time:</h6>
-                                    <small>9-10 AM</small>
+                                    <small>10:00-11:00 AM</small>
                                 </div>
                             </div>
                             <div class="col-4">
