@@ -11,6 +11,7 @@ if (!isset($_SESSION['user']) || $_SESSION['role'] != 'Teacher') {
 
 
 //include_once 'database.php';
+error_reporting(0);
 
 ?>
 
