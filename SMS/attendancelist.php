@@ -244,19 +244,15 @@ x.style.display='block';</script>";
                           // output data of each row
                           while ($row = $result->fetch_assoc()) {
                             echo "<tr><td> " . $row["sid"] . " </td><td> " . $row["fname"] . " " . $row["lname"] . " </td>
-                      <td><div class='form-group'>
-                 <input type='hidden' name='sid[]'' value='" . $row["sid"] . "' />
-                 <input type='hidden' name='aid[]'' value='" . $_GET["aid"] . "' />
-                  <div class='radio '>
-  <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked> &nbsp&nbsp&nbspPresent</label>
-  <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' checked> &nbsp&nbsp&nbspAbsent</label>
-
-</div>
-                 
+                          <td><div class='form-group'>
+                          <input type='hidden' name='sid[]'' value='" . $row["sid"] . "' />
+                          <input type='hidden' name='aid[]'' value='" . $_GET["aid"] . "' />
+                          <div class='radio '>
+                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked> &nbsp&nbsp&nbspPresent</label>
+                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' checked> &nbsp&nbsp&nbspAbsent</label>
+                      </div>
                 </div></td>
-
-
-                      </tr>";
+                        </tr>";
                             $x++;
                           }
                         }
@@ -281,11 +277,6 @@ x.style.display='block';</script>";
 
             <?php } elseif (isset($_GET['view'])) { ?>
 
-
-
-
-
-
               <div class="box box-primary">
                 <div class="box-header with-border">
                   <h3 class="box-title">Students Attendance</h3>
@@ -300,8 +291,6 @@ x.style.display='block';</script>";
                           <th>Student ID</th>
                           <th>Name</th>
                           <th>Attendance</th>
-
-
                         </tr>
                       </thead>
                       <tbody>
@@ -333,30 +322,14 @@ x.style.display='block';</script>";
                       </tfoot>
                     </table>
                 </div>
-
-
-
                 <!-- /.box-body -->
               </div>
-
-
-
-
-
-
-
               <?php
-
-
-
             # code...
           } ?>
 
           </div>
           <!-- /.box -->
-
-
-
         </div>
 
         <!--------------------------

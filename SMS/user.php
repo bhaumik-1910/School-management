@@ -112,26 +112,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <form role="form" method="POST">
                 <div class="box-body">
 
-
-
-                  <div class="form-group">
-                    <label>Exam</label>
-                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
-                      aria-hidden="true" name="email">
-                      <option>Select Email</option>
-                      <?php
-                      $sql = "select email from (select email from parent UNION select email from student UNION select email from teacher) as t";
-                      $result = $conn->query($sql);
-                      if ($result->num_rows > 0) {
-                        // output data of each row
-                        while ($row = $result->fetch_assoc()) {
-                          echo "<option value='" . $row["email"] . "' > " . $row["email"] . " </option>";
-                        }
-                      }
-                      ?>
-                    </select>
-                  </div>
-
+                <div class="form-group">
+    <label>Permission Role</label>
+    <select class="form-control select2" style="width: 100%;" name="role" id="role-select">
+        <option value="">Select Role</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Student">Student</option>
+        <option value="Parent">Parent</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Email</label>
+    <select class="form-control select2" style="width: 100%;" name="email" id="email-select">
+        <option value="">Select Email</option>
+    </select>
+</div>
 
 
 
@@ -144,17 +139,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       placeholder="Enter Password" required>
                   </div>
 
-                  <div class="form-group">
-                    <label>Permission Role </label>
-                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
-                      aria-hidden="true" name="role">
-                      <option>Select Role</option>
-                      <option value="Teacher">Teacher</option>
-                      <option value="Student">Student</option>
-                      <option value="Parent">Parent</option>
-
-                    </select>
-                  </div>
+                 
 
 
                 </div>
@@ -359,6 +344,30 @@ x.style.display='block';</script>";
     })
 
   </script>
+
+
+<script>
+$(document).ready(function() {
+    $('#role-select').change(function() {
+        var selectedRole = $(this).val();
+        $('#email-select').empty().append('<option value="">Select Email</option>'); // Reset email dropdown
+
+        if (selectedRole) {
+            $.ajax({
+                url: 'fetch_emails.php',
+                type: 'POST',
+                data: { role: selectedRole },
+                dataType: 'json',
+                success: function(data) {
+                    $.each(data, function(index, email) {
+                        $('#email-select').append('<option value="' + email + '">' + email + '</option>');
+                    });
+                }
+            });
+        }
+    });
+});
+</script>
 
 
 

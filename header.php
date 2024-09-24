@@ -70,11 +70,11 @@
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                 </div>
 
-                <!-- <a href="./SMS/login.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Login<i
-                        class="fa fa-arrow-right ms-3"></i></a> -->
+                <a href="./SMS/login.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Login<i
+                        class="fa fa-arrow-right ms-3"></i></a>
 
                 <!-- Login Button -->
-                <div class="nav-item dropdown">
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link  btn btn-primary rounded-pill px-3 d-none d-lg-block"
                         data-bs-toggle="dropdown">Login<i class="fa fa-arrow-right ms-3"></i></a>
                     <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
@@ -82,7 +82,7 @@
                         <a href="./SMS/student-login.php" class="dropdown-item">Student</a>
                         <a href="./SMS/parent-login.php" class="dropdown-item">Parent</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </nav>
         <!-- Navbar End -->
