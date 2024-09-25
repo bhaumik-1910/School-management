@@ -9,7 +9,7 @@ if (!isset($_SESSION['user']) || $_SESSION['role'] != 'Teacher') {
 ?>
 <?php
 
-
+error_reporting(0);
 //include_once 'database.php';
 
 ?>
@@ -248,8 +248,8 @@ x.style.display='block';</script>";
                           <input type='hidden' name='sid[]'' value='" . $row["sid"] . "' />
                           <input type='hidden' name='aid[]'' value='" . $_GET["aid"] . "' />
                           <div class='radio '>
-                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked> &nbsp&nbsp&nbspPresent</label>
-                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' checked> &nbsp&nbsp&nbspAbsent</label>
+                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked/> &nbsp&nbsp&nbspPresent</label>
+                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' checked/> &nbsp&nbsp&nbspAbsent</label>
                       </div>
                 </div></td>
                         </tr>";
