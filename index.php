@@ -345,7 +345,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Hardik Dave</h6>
+                                    <h6 class="text-primary mb-1">Full Name</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -386,7 +386,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Nikhil Dave</h6>
+                                    <h6 class="text-primary mb-1">Full Name</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -427,7 +427,7 @@
                                 <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                                     style="width: 45px; height: 45px;">
                                 <div class="ms-3">
-                                    <h6 class="text-primary mb-1">Viranchhi Dave</h6>
+                                    <h6 class="text-primary mb-1">Full Name</h6>
                                     <small>Teacher</small>
                                 </div>
                             </div>
@@ -576,7 +576,7 @@ if (isset($_POST['submit'])) {
                 <div class="team-item position-relative">
                     <img class="img-fluid rounded-circle w-75" src="img/team-1.jpg" alt="">
                     <div class="team-text">
-                        <h3>Hardik Dave</h3>
+                        <h3>Full Name</h3>
                         <p>Professor</p>
                         <div class="d-flex align-items-center">
                             <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -590,7 +590,7 @@ if (isset($_POST['submit'])) {
                 <div class="team-item position-relative">
                     <img class="img-fluid rounded-circle w-75" src="img/team-2.jpg" alt="">
                     <div class="team-text">
-                        <h3>Rashesh Rehi</h3>
+                        <h3>Full Name</h3>
                         <p>Professor</p>
                         <div class="d-flex align-items-center">
                             <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -604,7 +604,7 @@ if (isset($_POST['submit'])) {
                 <div class="team-item position-relative">
                     <img class="img-fluid rounded-circle w-75" src="img/team-3.jpg" alt="">
                     <div class="team-text">
-                        <h3>Radhika Pithadiya</h3>
+                        <h3>Full Name</h3>
                         <p>Professor</p>
                         <div class="d-flex align-items-center">
                             <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
