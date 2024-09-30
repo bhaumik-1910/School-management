@@ -27,8 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Attendance Report Report</title>
-  <link rel="icon" href="../img/logo.png">
-
+  <link rel="icon" href="../img/favicon2.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -236,26 +235,28 @@ x.style.display='block';</script>";
 
                         <?php
 
-                        $sql = "SELECT * from student where classroom='" . $_GET['class'] . "'";
-                        $result = $conn->query($sql);
+//                         $sql = "SELECT * from student where classroom='" . $_GET['class'] . "'";
+//                         $result = $conn->query($sql);
 
-                        if ($result->num_rows > 0) {
-                          $x = 0;
-                          // output data of each row
-                          while ($row = $result->fetch_assoc()) {
-                            echo "<tr><td> " . $row["sid"] . " </td><td> " . $row["fname"] . " " . $row["lname"] . " </td>
-                          <td><div class='form-group'>
-                          <input type='hidden' name='sid[]'' value='" . $row["sid"] . "' />
-                          <input type='hidden' name='aid[]'' value='" . $_GET["aid"] . "' />
-                          <div class='radio '>
-                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked/> &nbsp&nbsp&nbspPresent</label>
-                          <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' checked/> &nbsp&nbsp&nbspAbsent</label>
-                      </div>
-                </div></td>
-                        </tr>";
-                            $x++;
-                          }
-                        }
+//                         if ($result->num_rows > 0) {
+//                           $x = 0;
+//                           // output data of each row
+//                           while ($row = $result->fetch_assoc()) {
+//                             echo "<tr><td> " . $row["sid"] . " </td><td> " . $row["fname"] . " " . $row["lname"] . " </td>
+//                       <td><div class='form-group'>
+//                  <input type='hidden' name='sid[]'' value='" . $row["sid"] . "' />
+//                  <input type='hidden' name='aid[]'' value='" . $_GET["aid"] . "' />
+//                   <div class='radio '>
+//   <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked> &nbsp&nbsp&nbspPresent</label>
+//   <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent' > &nbsp&nbsp&nbspAbsent</label>
+// </div>
+                 
+//                 </div></td>
+//                       </tr>";
+//                             $x++;
+//                           }
+//                         }
+
 
                         ?>
 
@@ -277,6 +278,11 @@ x.style.display='block';</script>";
 
             <?php } elseif (isset($_GET['view'])) { ?>
 
+
+
+
+
+
               <div class="box box-primary">
                 <div class="box-header with-border">
                   <h3 class="box-title">Students Attendance</h3>
@@ -291,6 +297,8 @@ x.style.display='block';</script>";
                           <th>Student ID</th>
                           <th>Name</th>
                           <th>Attendance</th>
+
+
                         </tr>
                       </thead>
                       <tbody>
@@ -307,8 +315,6 @@ x.style.display='block';</script>";
                           while ($row = $result->fetch_assoc()) {
                             echo "<tr><td> " . $row["sid"] . " </td><td> " . $row["fname"] . " " . $row["lname"] . " </td>
                       <td>" . $row["status"] . " </td>
-
-
                       </tr>";
                           }
                         }
@@ -322,14 +328,30 @@ x.style.display='block';</script>";
                       </tfoot>
                     </table>
                 </div>
+
+
+
                 <!-- /.box-body -->
               </div>
+
+
+
+
+
+
+
               <?php
+
+
+
             # code...
           } ?>
 
           </div>
           <!-- /.box -->
+
+
+
         </div>
 
         <!--------------------------
@@ -429,23 +451,96 @@ x.style.display='block';</script>";
 
 <?php
 
+// if (isset($_POST['submitatt'])) {
+//   foreach ($_POST['att'] as $id => $att) {
+
+
+//     $sid = $_POST['sid'][$id];
+//     $aid = $_POST['aid'][$id];
+
+//     echo "===>1 -- " . $sid;
+//     echo "===>2 -- " . $aid;
+//     echo "===>3 -- " . $att;
+//     echo "<br/>";
+
+
+//     $attendance = $conn->prepare("INSERT INTO attendancereport (aid,sid,status) VALUES (?, ?, ?)");
+//     $attendance->bind_param("iss", $aid, $sid, $att);
+//     $attendance->execute();
+
+//     echo "<script type='text/javascript'> var x = document.getElementById('truemsg');
+// x.style.display='block';</script>";
+//   }
+
+//   if ($conn->affected_rows > 0) {
+//     $msg = "Attendance has been added successfully";
+//   }
+// } 
+?>
+
+<?php
+// Assuming $conn is your MySQLi connection
+
+// Fetch students from the specified classroom
+$classroom = $_GET['class'];
+$sql = "SELECT * FROM student WHERE classroom = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $classroom);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $x = 0;
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>" . htmlspecialchars($row["sid"]) . "</td>
+                <td>" . htmlspecialchars($row["fname"] . " " . $row["lname"]) . "</td>
+                <td>
+                    <div class='form-group'>
+                        <input type='hidden' name='sid[]' value='" . htmlspecialchars($row["sid"]) . "' />
+                        <input type='hidden' name='aid[]' value='" . htmlspecialchars($_GET["aid"]) . "' />
+                        <div class='radio'>
+                            <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Present' checked> Present</label>
+                            <label style='width: 100px'><input type='radio' name='att[" . $x . "]' value='Absent'> Absent</label>
+                        </div>
+                    </div>
+                </td>
+              </tr>";
+        $x++;
+    }
+}
+
+$stmt->close();
+
+
+// Handle form submission
 if (isset($_POST['submitatt'])) {
-  foreach ($_POST['att'] as $id => $att) {
+    $attendanceStmt = $conn->prepare("INSERT INTO attendancereport (aid, sid, status) VALUES (?, ?, ?)");
+    
+    foreach ($_POST['att'] as $id => $att) {
+        $sid = $_POST['sid'][$id];
+        $aid = $_POST['aid'][$id];
 
+        // Debugging output
+        echo "===>1 -- " . htmlspecialchars($sid);
+        echo "===>2 -- " . htmlspecialchars($aid);
+        echo "===>3 -- " . htmlspecialchars($att);
+        echo "<br/>";
 
-    $sid = $_POST['sid'][$id];
-    $aid = $_POST['aid'][$id];
+        // Bind parameters and execute the statement
+        $attendanceStmt->bind_param("iss", $aid, $sid, $att);
+        $attendanceStmt->execute();
+    }
 
+    if ($attendanceStmt->affected_rows > 0) {
+        $msg = "Attendance has been added successfully";
+        echo "<script type='text/javascript'>
+                var x = document.getElementById('truemsg');
+                x.style.display='block';
+              </script>";
+    }
 
-    $attendance = $conn->prepare("INSERT INTO attendancereport (aid,sid,status) VALUES (?, ?, ?)");
-    $attendance->bind_param("iss", $aid, $sid, $att);
-    $attendance->execute();
-
-    echo "<script type='text/javascript'> var x = document.getElementById('truemsg');
-x.style.display='block';</script>";
-  }
-
-  if ($conn->affected_rows > 0) {
-    $msg = "Attendance has been added successfully";
-  }
-} ?>
+    $attendanceStmt->close();
+}
+?>
