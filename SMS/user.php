@@ -146,7 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                  <button type="submit" name="submit" value="submit" class="btn btn-primary">Add Result</button>
+                  <button type="submit" name="submit" value="submit" class="btn btn-primary">Add User</button>
                 </div>
               </form>
 

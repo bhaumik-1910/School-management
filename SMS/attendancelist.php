@@ -247,7 +247,7 @@ x.style.display='block';</script>";
                  <input type='hidden' name='sid[]' value='" . $row["sid"] . "' />
                   <div class='radio'>
   <label style='width: 100px'><input type='radio' name='att[" . $row["sid"] . "]' value='Present' checked> &nbsp&nbsp&nbspPresent</label>
-  <label style='width: 100px'><input type='radio' name='att[" .$row["sid"] . "]' value='Absent' > &nbsp&nbsp&nbspAbsent</label>
+  <label style='width: 100px'><input type='radio' name='att[" . $row["sid"] . "]' value='Absent' > &nbsp&nbsp&nbspAbsent</label>
 </div>
                  
                 </div></td>
@@ -463,25 +463,25 @@ if (isset($_POST['submitatt'])) {
 
   // Build a single SQL query with multiple records
   for ($i = 0; $i < count($_POST['sid']); $i++) {
-      $sid = $_POST['sid'][$i];
-      $att = $_POST['att'][$sid];  
+    $sid = $_POST['sid'][$i];
+    $att = $_POST['att'][$sid];
 
-      // Append values for batch insertion
-      $insertValues[] = "($aid, '$sid', '$att')";
+    // Append values for batch insertion
+    $insertValues[] = "($aid, '$sid', '$att')";
   }
 
   // Construct the SQL statement
   if (!empty($insertValues)) {
-      $insertQuery = "INSERT INTO attendancereport (aid, sid, status) VALUES " . implode(',', $insertValues);
+    $insertQuery = "INSERT INTO attendancereport (aid, sid, status) VALUES " . implode(',', $insertValues);
 
-      // Execute the query
-      if ($conn->query($insertQuery) === TRUE) {
-          echo "<script type='text/javascript'> var x = document.getElementById('truemsg');
+    // Execute the query
+    if ($conn->query($insertQuery) === TRUE) {
+      echo "<script type='text/javascript'> var x = document.getElementById('truemsg');
           x.style.display='block';</script>";
-          $msg = "Attendance has been added successfully";
-      } else {
-          echo "Error: " . $conn->error; // Handle error
-      }
+      $msg = "Attendance has been added successfully";
+    } else {
+      echo "Error: " . $conn->error; // Handle error
+    }
   }
 }
 
