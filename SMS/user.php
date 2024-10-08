@@ -154,7 +154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
               if (isset($_POST['submit'])) {
                 $email = $_POST['email'];
-                $password = $_POST['password'];
+                $password = md5($_POST['password']);
                 $role = $_POST['role'];
 
                 // $date = date_format(new DateTime($_POST['date']),'Y-m-d');

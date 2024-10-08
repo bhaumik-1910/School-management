@@ -69,7 +69,7 @@ include_once 'database.php';
 
         if (isset($_POST['submit'])) {
           $email = $_POST['email'];
-          $password = $_POST['password'];
+          $password = md5($_POST['password']);
 
           $sql = "SELECT * FROM user WHERE email ='" . $email . "' and password = '" . $password . "' ";
           $result = $conn->query($sql);
