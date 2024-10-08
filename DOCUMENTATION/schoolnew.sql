@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2024 at 11:59 AM
+-- Generation Time: Oct 08, 2024 at 12:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -60,7 +60,7 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`sid`, `date`, `aid`) VALUES
-(3, '2024-09-21', 8);
+(3, '2024-07-08', 15);
 
 -- --------------------------------------------------------
 
@@ -73,6 +73,61 @@ CREATE TABLE `attendancereport` (
   `sid` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `attendancereport`
+--
+
+INSERT INTO `attendancereport` (`aid`, `sid`, `status`) VALUES
+(15, '10556147', 'Present'),
+(15, '13732567', 'Present'),
+(15, '18986355', 'Present'),
+(15, '20825657', 'Present'),
+(15, '2233337', 'Present'),
+(15, '25142821', 'Present'),
+(15, '25862015', 'Present'),
+(15, '27318074', 'Present'),
+(15, '27537271', 'Present'),
+(15, '31056969', 'Present'),
+(15, '31064788', 'Present'),
+(15, '35219993', 'Present'),
+(15, '38657049', 'Present'),
+(15, '4358697', 'Present'),
+(15, '4959690', 'Present'),
+(15, '50536988', 'Present'),
+(15, '51454207', 'Present'),
+(15, '52122973', 'Present'),
+(15, '54783852', 'Present'),
+(15, '54965701', 'Present'),
+(15, '55153875', 'Present'),
+(15, '55941080', 'Present'),
+(15, '56607245', 'Present'),
+(15, '59314413', 'Present'),
+(15, '60298640', 'Present'),
+(15, '6144390', 'Present'),
+(15, '62940644', 'Present'),
+(15, '63534966', 'Present'),
+(15, '65344999', 'Present'),
+(15, '67527959', 'Present'),
+(15, '72766971', 'Present'),
+(15, '79325536', 'Present'),
+(15, '79801721', 'Present'),
+(15, '80051462', 'Present'),
+(15, '82158847', 'Present'),
+(15, '8254676', 'Present'),
+(15, '82615431', 'Present'),
+(15, '84380561', 'Present'),
+(15, '85817009', 'Present'),
+(15, '85941209', 'Present'),
+(15, '86917767', 'Present'),
+(15, '87436917', 'Present'),
+(15, '88026743', 'Present'),
+(15, '88164263', 'Present'),
+(15, '89606018', 'Present'),
+(15, '90027453', 'Present'),
+(15, '94108926', 'Present'),
+(15, '95839409', 'Present'),
+(15, '96412857', 'Present');
 
 -- --------------------------------------------------------
 
@@ -117,10 +172,8 @@ CREATE TABLE `complaint` (
 --
 
 INSERT INTO `complaint` (`Id`, `Y_name`, `Y_email`, `Subject`, `Message`) VALUES
-(2, 'Kothiya Bhaumik ', 'bhaumik@gmail.com', 'Python', 'Samjatu nathi'),
-(3, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs'),
-(4, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs'),
-(5, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'vahh srs');
+(2, 'Kothiya Bhaumik ', 'bhaumik@gmail.com', 'Python', 'Not Undersstand'),
+(3, 'Gajera Prince', 'prince@gmail.com', 'J2EE', 'Understand');
 
 -- --------------------------------------------------------
 
@@ -165,12 +218,12 @@ CREATE TABLE `examresult` (
 --
 
 INSERT INTO `examresult` (`exam`, `student`, `marks`, `grade`) VALUES
-(1, '25142821', 77, 'A'),
-(1, '79325536', 80, 'A'),
-(2, '25142821', 80, 'A+'),
-(2, '79325536', 90, 'A+'),
-(3, '25142821', 90, 'A+'),
-(3, '79325536', 77, 'A');
+(1, '10556147', 77, 'B+'),
+(1, '85817009', 90, 'A+'),
+(2, '10556147', 80, 'A'),
+(2, '85817009', 77, 'B+'),
+(3, '10556147', 90, 'A+'),
+(3, '85817009', 80, 'A');
 
 -- --------------------------------------------------------
 
@@ -190,8 +243,9 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `notice`, `odience`, `date`) VALUES
-(2, 'Meeting', 'Parent', '2020-05-28 02:53:02'),
-(3, 'aaasas', 'All', '2020-05-28 02:57:28');
+(2, 'All Parent Meeting', 'Parent', '2020-05-28 02:53:02'),
+(3, 'All Meeting', 'All', '2020-05-28 02:57:28'),
+(4, 'All Student Meeting', 'Student', '2024-10-08 16:07:23');
 
 -- --------------------------------------------------------
 
@@ -310,7 +364,8 @@ CREATE TABLE `schedule` (
 INSERT INTO `schedule` (`id`, `subject`, `teacher`, `day`, `stime`, `class`, `etime`) VALUES
 (3, '21275003', '3614650', 'Monday', '09:00:00', '3-B', '10:00:00'),
 (4, '31302945', '41972491', 'Monday', '09:00:00', '3-C', '10:00:00'),
-(5, '31302945', '62207555', 'Monday', '09:00:00', '3-A', '10:00:00');
+(5, '31302945', '62207555', 'Monday', '09:00:00', '3-A', '10:00:00'),
+(6, '21275003', '41972491', 'Tuesday', '03:45:00', '3-B', '04:45:00');
 
 -- --------------------------------------------------------
 
@@ -336,7 +391,7 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`sid`, `fname`, `lname`, `bday`, `address`, `parent`, `gender`, `classroom`, `email`) VALUES
 ('10252379', 'HARSHIL', 'SAKARIYA ', '2004-07-10', 'Rajkot', 48, 'Male', '3-C', 'harshil@gmail.com'),
-('10556147', 'BHAUMIK', 'KOTHIYA ', '2024-09-19', 'Rajkot', 3, 'Male', '3-B', 'bhaumik@gmaill.com'),
+('10556147', 'BHAUMIK', 'KOTHIYA ', '2024-09-19', 'Rajkot', 3, 'Male', '3-B', 'bhaumik@gmail.com'),
 ('12005742', 'VIPUL ', 'DHARAJIYA ', '2004-07-10', 'Rajkot', 13, 'Male', '3-C', 'vipul@gmail.com'),
 ('13612004', 'BANSI ', 'GALORIYA ', '2004-07-10', 'Rajkot', 21, 'Female', '3-C', 'bansi@gmail.com'),
 ('13732567', 'ACHYUT ', 'VAGHASIYA ', '2024-08-10', 'Rajkot', 63, 'Male', '3-B', 'achyut@gmail.com'),
@@ -480,9 +535,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`role`, `email`, `password`) VALUES
-('Teacher', 'hardik@gmail.com', 'hardik'),
-('Student', 'nil@gmail.com', 'nil'),
-('Parent', 'suresh@gmail.com', 'suresh');
+('Student', 'bhaumik@gmail.com', '2fa943aa42ca3d97b7a6933c28bb6ee3'),
+('Teacher', 'bhoomi@gmail.com', '020058ee7e27fb66b292c2b48361ba92'),
+('Parent', 'mukesh@gmail.com', 'a883bde368145d717b99c70594fd6069'),
+('Student', 'rudra@gmail.com', '7f064da04f6fce39f051d75dcfc43221'),
+('Parent', 'suresh@gmail.com', '0487cc982f7db39c51695026e4bdc692');
 
 --
 -- Indexes for dumped tables
@@ -589,7 +646,7 @@ ALTER TABLE `appointment`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `aid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `complaint`
@@ -607,7 +664,7 @@ ALTER TABLE `exam`
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `parent`
@@ -619,7 +676,7 @@ ALTER TABLE `parent`
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
